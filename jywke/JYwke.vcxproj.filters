@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="pch.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="wke\jsRunningManager.cpp">
+      <Filter>功能代码\wke</Filter>
+    </ClCompile>
+    <ClCompile Include="CwkeTBInfo.cpp">
+      <Filter>功能代码</Filter>
+    </ClCompile>
+    <ClCompile Include="wke_webkit.cpp">
+      <Filter>支持库相关\组件</Filter>
+    </ClCompile>
+    <ClCompile Include="wke_webkit_CmdFun.cpp">
+      <Filter>支持库相关\组件</Filter>
+    </ClCompile>
+    <ClCompile Include="wke_webkit_Event.cpp">
+      <Filter>支持库相关\组件</Filter>
+    </ClCompile>
+    <ClCompile Include="wke_webkit_GetProp.cpp">
+      <Filter>支持库相关\组件</Filter>
+    </ClCompile>
+    <ClCompile Include="wke_webkit_Parse.cpp">
+      <Filter>支持库相关\组件</Filter>
+    </ClCompile>
+    <ClCompile Include="wke_webkit_PropChange.cpp">
+      <Filter>支持库相关\组件</Filter>
+    </ClCompile>
+    <ClCompile Include="wke_dllMain.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="wke_webkit_Event_msg.cpp">
+      <Filter>支持库相关\组件</Filter>
+    </ClCompile>
+    <ClCompile Include="include\hook\buffer.c">
+      <Filter>辅助功能\apihook</Filter>
+    </ClCompile>
+    <ClCompile Include="include\hook\hook.c">
+      <Filter>辅助功能\apihook</Filter>
+    </ClCompile>
+    <ClCompile Include="include\hook\trampoline.c">
+      <Filter>辅助功能\apihook</Filter>
+    </ClCompile>
+    <ClCompile Include="include\hook\hde\hde32.c">
+      <Filter>辅助功能\apihook\hde</Filter>
+    </ClCompile>
+    <ClCompile Include="include\hook\hde\hde64.c">
+      <Filter>辅助功能\apihook\hde</Filter>
+    </ClCompile>
+    <ClCompile Include="include\elib\fnshare.cpp">
+      <Filter>辅助功能\elib</Filter>
+    </ClCompile>
+    <ClCompile Include="fun_cmd.cpp">
+      <Filter>支持库相关\不是类的命令</Filter>
+    </ClCompile>
+    <ClCompile Include="fun_ajax.cpp">
+      <Filter>支持库相关\几个数据类型</Filter>
+    </ClCompile>
+    <ClCompile Include="fun_javascript.cpp">
+      <Filter>支持库相关\几个数据类型</Filter>
+    </ClCompile>
+    <ClCompile Include="fun_tb.cpp">
+      <Filter>支持库相关\几个数据类型</Filter>
+    </ClCompile>
+    <ClCompile Include="fun_SpecialFunction.cpp">
+      <Filter>支持库相关\几个数据类型</Filter>
+    </ClCompile>
+    <ClCompile Include="wke_cmdDef.cpp">
+      <Filter>支持库相关\支持库定义</Filter>
+    </ClCompile>
+    <ClCompile Include="wke_const.cpp">
+      <Filter>支持库相关\支持库定义</Filter>
+    </ClCompile>
+    <ClCompile Include="wke_dtType.cpp">
+      <Filter>支持库相关\支持库定义</Filter>
+    </ClCompile>
+    <ClCompile Include="wke_dtType_Webkit.cpp">
+      <Filter>支持库相关\组件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="wke\jsRunningManager.h">
+      <Filter>功能代码\wke</Filter>
+    </ClInclude>
+    <ClInclude Include="wke\MbE.h">
+      <Filter>功能代码\wke</Filter>
+    </ClInclude>
+    <ClInclude Include="wke\rendergdi.h">
+      <Filter>功能代码\wke</Filter>
+    </ClInclude>
+    <ClInclude Include="Cajax.h">
+      <Filter>功能代码</Filter>
+    </ClInclude>
+    <ClInclude Include="CwkeTBInfo.h">
+      <Filter>功能代码</Filter>
+    </ClInclude>
+    <ClInclude Include="WKECtrl.h">
+      <Filter>功能代码</Filter>
+    </ClInclude>
+    <ClInclude Include="wke_webkit_header.h">
+      <Filter>支持库相关\组件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\hook\apiHook.h">
+      <Filter>辅助功能\apihook</Filter>
+    </ClInclude>
+    <ClInclude Include="include\hook\buffer.h">
+      <Filter>辅助功能\apihook</Filter>
+    </ClInclude>
+    <ClInclude Include="include\hook\MinHook.h">
+      <Filter>辅助功能\apihook</Filter>
+    </ClInclude>
+    <ClInclude Include="include\hook\trampoline.h">
+      <Filter>辅助功能\apihook</Filter>
+    </ClInclude>
+    <ClInclude Include="include\hook\hde\hde32.h">
+      <Filter>辅助功能\apihook\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="include\hook\hde\hde64.h">
+      <Filter>辅助功能\apihook\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="include\hook\hde\pstdint.h">
+      <Filter>辅助功能\apihook\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="include\hook\hde\table32.h">
+      <Filter>辅助功能\apihook\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="include\hook\hde\table64.h">
+      <Filter>辅助功能\apihook\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="include\elib\fnshare.h">
+      <Filter>辅助功能\elib</Filter>
+    </ClInclude>
+    <ClInclude Include="include\elib\krnllib.h">
+      <Filter>辅助功能\elib</Filter>
+    </ClInclude>
+    <ClInclude Include="include\elib\lang.h">
+      <Filter>辅助功能\elib</Filter>
+    </ClInclude>
+    <ClInclude Include="include\elib\lib2.h">
+      <Filter>辅助功能\elib</Filter>
+    </ClInclude>
+    <ClInclude Include="include\elib\mtypes.h">
+      <Filter>辅助功能\elib</Filter>
+    </ClInclude>
+    <ClInclude Include="include\elib\PublicIDEFunctions.h">
+      <Filter>辅助功能\elib</Filter>
+    </ClInclude>
+    <ClInclude Include="include\elib\untshare.h">
+      <Filter>辅助功能\elib</Filter>
+    </ClInclude>
+    <ClInclude Include="wke_webkit_event.h">
+      <Filter>支持库相关\组件</Filter>
+    </ClInclude>
+    <ClInclude Include="wke_version.h">
+      <Filter>支持库相关\支持库定义</Filter>
+    </ClInclude>
+    <ClInclude Include="wke_cmd_typedef.h">
+      <Filter>支持库相关\支持库定义</Filter>
+    </ClInclude>
+    <ClInclude Include="wke_head_base.h">
+      <Filter>支持库相关\支持库定义</Filter>
+    </ClInclude>
+    <ClInclude Include="wke_typedef.h">
+      <Filter>支持库相关\支持库定义</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JYwke.def">
+      <Filter>源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{6a781baa-5965-4365-b42f-33d8660b4ba5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{d4f02b3b-9e5b-4ea8-9318-6e86b4ee12cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{7fe09c70-5d7a-40cf-8a26-6c2d711100fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="辅助功能">
+      <UniqueIdentifier>{37f9f2e1-09df-4a9a-9e20-52d370cf7370}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="辅助功能\apihook">
+      <UniqueIdentifier>{9e1723a0-6e5d-41c9-867d-3f0abbef5868}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="辅助功能\apihook\hde">
+      <UniqueIdentifier>{d1a82af9-3cbe-41ec-837f-a45f8cc7b930}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="支持库相关">
+      <UniqueIdentifier>{37335055-c853-4248-8d81-479ee1210cc6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="支持库相关\组件">
+      <UniqueIdentifier>{96bb5a92-34c6-4740-a9de-d8943d8afb35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="辅助功能\elib">
+      <UniqueIdentifier>{237b6365-6c4c-41aa-962b-b4bcf1c390ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="支持库相关\不是类的命令">
+      <UniqueIdentifier>{3dbb2de2-bc53-400c-a1b5-d0dc5101fb08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="支持库相关\几个数据类型">
+      <UniqueIdentifier>{34374089-1dd1-41c3-a1fd-40d421e4c77e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="功能代码">
+      <UniqueIdentifier>{27739639-e2ed-4799-afd6-c470c42bee47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="功能代码\wke">
+      <UniqueIdentifier>{34af9c9a-7a1b-457b-ba14-9896ff348c35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="支持库相关\支持库定义">
+      <UniqueIdentifier>{1eb71f79-ba1c-400b-8853-29ea61e6c08e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="JYwke.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="browser.bmp" />
+  </ItemGroup>
+</Project>
