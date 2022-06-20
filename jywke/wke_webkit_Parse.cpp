@@ -76,14 +76,12 @@ HGLOBAL WINAPI wke_PropGetDataAll_Webkit(HUNIT hUnit)
 
     //! 写入属性还是按A版写入
     size += write_int32(buf, WEBKIT_VERSION);       // 版本号
-    size += write_str_A(buf, prop.url);             // URL地址
-    size += write_str_A(buf, prop.title);           // 网页标题
     size += write_int32(buf, prop.DisableF5);       // 禁止F5刷新
     size += write_int32(buf, prop.DisableCookie);   // 禁止cookie
+    size += write_str_A(buf, prop.url);             // URL地址
     size += write_str_A(buf, prop.pszCachePath);    // 缓存目录
     size += write_str_A(buf, prop.pszCookiePath);   // cookie目录
     size += write_str_A(buf, prop.pszUserAgent);    // User Agent
-    size += write_int32(buf, prop.debugShow);       // 调试时预览
     size += write_int32(buf, prop.isNewWnd);        // 允许新窗口打开
 
     HGLOBAL hGlobal = ::GlobalAlloc(GMEM_MOVEABLE, size);

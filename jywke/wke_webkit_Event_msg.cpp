@@ -99,7 +99,11 @@ LRESULT call_msg_event(PWEBKIT_PROPERTYEX data, jyWebKey_Event_callBack& callTyp
     if ( ret )
     {
         if ( nEvent == EVENT_CHAR )
-            return ret; // 字符是直接返回用户返回的值
+        {
+            wParam = ret; // 字符是替换成用户返回的值
+            if ( wParam == 0 )
+                return 0;
+        }
         return ::CallWindowProcW(data->oldProc, data->hWnd, message, wParam, lParam);
     }
     return 0;
@@ -107,7 +111,7 @@ LRESULT call_msg_event(PWEBKIT_PROPERTYEX data, jyWebKey_Event_callBack& callTyp
 
 #define _JYWEBKIT_EVENT_MOUSE(_case, _type, _evt) \
 case _case:\
-    return call_msg_event(data, wke->jyEvent.keyUp, message, wParam, lParam, (__query(data->flags, EVENT_PTR_E) ? (_evt) : -1));\
+    return call_msg_event(data, wke->jyEvent._type, message, wParam, lParam, (__query(data->flags, EVENT_PTR_E) ? (_evt) : -1));\
     break
 
 LRESULT wke_WebViewWndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
@@ -181,7 +185,9 @@ LRESULT wke_WebViewWndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam
     {
         if ( __query(data->flags, EVENT_PTR_E) )
         {
-            return event_notify_wke(data, EVENT_CHAR, 1, wParam);
+            wParam = event_notify_wke(data, EVENT_CHAR, 1, wParam);
+            if ( !wParam ) return 0;
+            break;
         }
         if ( wke->jyEvent.charSet.fun )
         {
