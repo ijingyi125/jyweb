@@ -1,4 +1,8 @@
-# 精易web浏览器支持库 说明  
+[![精易论坛](https://bbs.125.la/static/image/common/logo.png)](https://bbs.125.la/)
+
+----
+
+# 精易web浏览器支持库 说明
 
 > 精易web浏览器基于miniblink开发  
 > miniblibk官方地址: https://miniblink.net/  
@@ -16,5 +20,6 @@
 ### 2022-06-18 更新说明
 > 精易web浏览器项目开源地址, 以后有更新会提交到这里  
 > 有问题欢迎提出  
-> 有能力可以自己修改
+> 有能力可以自己修改  
+
 
