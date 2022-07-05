@@ -38,6 +38,8 @@ VC6/*
 支持库*/*
 易语言源码/lib/*
 易语言源码/static_lib/*
+易语言源码/例程/front_end/*
+易语言源码/例程/plugins/*
 miniblink*.dll
 cookie*.dat
 *localstorage
