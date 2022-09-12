@@ -761,7 +761,7 @@ EXTERN_C void WKE_NAME(216, wke_Create)( PMDATA_INF pRetData, INT nArgCount, PMD
 {
     pRetData->m_bool = FALSE;
     PWEBKIT_PROPERTYEX data = (PWEBKIT_PROPERTYEX)*pArgInf[0].m_ppCompoundData;
-
+    init_webkit();
     if ( !data )
     {
         data = new WEBKIT_PROPERTYEX;
@@ -792,7 +792,8 @@ EXTERN_C void WKE_NAME(216, wke_Create)( PMDATA_INF pRetData, INT nArgCount, PMD
     rc.right = pArgInf[4].m_int;
     rc.bottom = pArgInf[5].m_int;
 
-    if ( !wke->Create(type, hParent, rc.left, rc.top, rc.right, rc.bottom) )
+    const DWORD dwStyle = WS_CHILD | WS_CLIPSIBLINGS | WS_VISIBLE;
+    if ( !wke->create(hParent, dwStyle, 0, rc.left, rc.top, rc.right, rc.bottom, 0, type) )
     {
         if ( pArgInf[0].m_ppCompoundData[0] == 0 )
         {

@@ -66,9 +66,9 @@ public:
     }
 
     // 创建易语言用的窗口, 外面一层标签, 内部是mb窗口
-    inline HWND create(HWND hParentWnd, DWORD dwStyle, int nID, int x, int y, int cx, int cy, void* lParam)
+    inline HWND create(HWND hParentWnd, DWORD dwStyle, int nID, int x, int y, int cx, int cy, void* lParam, wkeWindowType type = WKE_WINDOW_TYPE_CONTROL)
     {
-        bool bRet = MbE::Create(WKE_WINDOW_TYPE_CONTROL, hParentWnd, x, y, cx, cy);
+        bool bRet = MbE::Create(type, hParentWnd, x, y, cx, cy);
         WKECtrl_OnPaint();
         HWND hWnd = MbE::GetWindowHandle();
         if ((GetClassLongPtrW(hWnd, GCL_STYLE) & CS_DBLCLKS) == 0) //如果没有双击的样式,加上一个,如果不需要双击事件,这里可以屏蔽

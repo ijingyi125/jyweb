@@ -63,6 +63,22 @@ PVOID GetDataFromHunit(HUNIT hUnit)
     return 0;
 }
 
+PVOID UpdateDataFromIdUnit(DWORD dwWinFormID, DWORD dwUnitID, HUNIT hUnit, PVOID pData)
+{
+    for ( int i = 0; i < s_arr_count; ++i )
+    {
+        _ASSIST_ID& item = s_arr_id[i];
+        if ( dwWinFormID == item.dwWinFormID && dwUnitID == item.dwUnitID )
+        {
+            PVOID ret = item.pData;
+            item.hUnit = hUnit;
+            item.pData = pData;
+            return ret;
+        }
+    }
+    return 0;
+}
+
 // 绑定数据, 如果ID有相同的, 那会把 hUnit和 pData 覆盖进去, 否则会新建一个保存
 PVOID SetDataFromIdUnit(DWORD dwWinFormID, DWORD dwUnitID, HUNIT hUnit, PVOID pData)
 {

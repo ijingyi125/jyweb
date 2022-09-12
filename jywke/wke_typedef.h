@@ -61,11 +61,14 @@ HUNIT GethUnitFromId(DWORD dwWinFormID, DWORD dwUnitID, PVOID * pRet = 0);
 HUNIT GethUnitFromArgInf(PMDATA_INF pInf, PVOID * pRet = 0);
 // 从hUnit里获取绑定的数据
 PVOID GetDataFromHunit(HUNIT hUnit);
+// 更新数据, 如果没有就直接返回
+PVOID UpdateDataFromIdUnit(DWORD dwWinFormID, DWORD dwUnitID, HUNIT hUnit, PVOID pData);
 // 绑定数据, 如果ID有相同的, 那会把 hUnit和 pData 覆盖进去, 否则会新建一个保存
 PVOID SetDataFromIdUnit(DWORD dwWinFormID, DWORD dwUnitID, HUNIT hUnit, PVOID pData);
 
 // 精易Web浏览器  下的组件交互方法
 EXTERN_C PFN_INTERFACE WINAPI wke_GetInterface_webkit(INT nInterfaceNO);
+bool init_webkit();
 
 
 // 定义 精易web浏览器 这个类型

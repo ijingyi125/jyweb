@@ -238,6 +238,7 @@ LRESULT wke_WebViewWndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam
         BOOL isDlg = wke->isDlg;
         RemovePropW(hWnd, L"newProc");
         SetWindowLongPtrW(hWnd, GWLP_WNDPROC, (LONG_PTR)oldProc);    //反子类化
+        UpdateDataFromIdUnit(data->dwWinFormID, data->dwUnitID, 0, 0);
         data->Uninit();
         delete data;
         if (isDlg)

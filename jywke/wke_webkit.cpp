@@ -18,6 +18,8 @@ HUNIT WINAPI wke_ControlCreate_Webkit(
     HWND hDesignWnd,					//   如果blInDesignMode为真，则hDesignWnd提供所设计窗口的窗口句柄。
     BOOL blInDesignMode);  				//   说明是否被易语言IDE调用以进行可视化设计，运行时为假。
 
+
+
 // 精易Web浏览器  下的组件交互方法
 EXTERN_C PFN_INTERFACE WINAPI wke_GetInterface_webkit(INT nInterfaceNO)
 {
@@ -84,18 +86,7 @@ EXTERN_C PFN_INTERFACE WINAPI wke_GetInterface_webkit(INT nInterfaceNO)
     return NULL;
 }
 
-
-HUNIT WINAPI wke_ControlCreate_Webkit(
-    LPBYTE pAllPropertyData,            //   指向本窗口单元的已有属性数据, 由本窗口单元的ITF_GET_PROPERTY_DATA接口产生, 如果没有数据则为NULL。
-    INT nAllPropertyDataSize,           //   提供pAllPropertyData所指向数据的尺寸, 如果没有则为0。
-    DWORD dwStyle,                      //   预先设置的窗口风格。
-    HWND hParentWnd,                    //   父窗口句柄。
-    UINT uID,                           //   在父窗口中的ID。
-    HMENU hMenu,                        //   未使用。
-    INT x, INT y, INT cx, INT cy,       //   指定位置及尺寸。
-    DWORD dwWinFormID, DWORD dwUnitID,  //   本窗口单元所在窗口及本身的ID, 用作通知到系统。
-    HWND hDesignWnd,                    //   如果blInDesignMode为真, 则hDesignWnd提供所设计窗口的窗口句柄。
-    BOOL blInDesignMode)                //   说明是否被易语言IDE调用以进行可视化设计, 运行时为假。
+bool init_webkit()
 {
     // 开始创建组件窗口
     if ( s_path.empty() )
@@ -111,7 +102,24 @@ HUNIT WINAPI wke_ControlCreate_Webkit(
             return 0;
         isInit = true;
     }
+    return true;
+}
 
+HUNIT WINAPI wke_ControlCreate_Webkit(
+    LPBYTE pAllPropertyData,            //   指向本窗口单元的已有属性数据, 由本窗口单元的ITF_GET_PROPERTY_DATA接口产生, 如果没有数据则为NULL。
+    INT nAllPropertyDataSize,           //   提供pAllPropertyData所指向数据的尺寸, 如果没有则为0。
+    DWORD dwStyle,                      //   预先设置的窗口风格。
+    HWND hParentWnd,                    //   父窗口句柄。
+    UINT uID,                           //   在父窗口中的ID。
+    HMENU hMenu,                        //   未使用。
+    INT x, INT y, INT cx, INT cy,       //   指定位置及尺寸。
+    DWORD dwWinFormID, DWORD dwUnitID,  //   本窗口单元所在窗口及本身的ID, 用作通知到系统。
+    HWND hDesignWnd,                    //   如果blInDesignMode为真, 则hDesignWnd提供所设计窗口的窗口句柄。
+    BOOL blInDesignMode)                //   说明是否被易语言IDE调用以进行可视化设计, 运行时为假。
+{
+
+    if ( !init_webkit() )
+        return 0;
     PWEBKIT_PROPERTYEX data = 0;
     HUNIT hUnit = GethUnitFromId(dwWinFormID, dwUnitID, (PVOID*)&data);
     if ( InitDataEx(data) )
